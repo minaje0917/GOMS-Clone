@@ -54,10 +54,10 @@ private extension AuthFlow {
     }
     
     func coordinateToLoginWithNumber() -> FlowContributors {
-        let vm = LoginWithNumberViewModel()
-        let vc = LoginWithNumberViewController(vm)
+        let reactor = LoginWithNumberReactor()
+        let vc = LoginWithNumberViewController(reactor)
         self.rootViewController.pushViewController(vc, animated: true)
-        return .one(flowContributor: .contribute(withNextPresentable: vc, withNextStepper: vm))
+        return .one(flowContributor: .contribute(withNextPresentable: vc, withNextStepper: reactor))
     }
     
     func presentToAlert(title: String?, message: String?, style: UIAlertController.Style, actions: [UIAlertAction]) -> FlowContributors {

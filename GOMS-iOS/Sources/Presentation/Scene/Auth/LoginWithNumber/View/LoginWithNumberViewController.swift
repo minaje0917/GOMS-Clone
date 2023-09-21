@@ -4,7 +4,7 @@ import Then
 import RxCocoa
 import RxFlow
 
-class LoginWithNumberViewController: BaseViewController<LoginWithNumberViewModel>{
+class LoginWithNumberViewController: BaseViewController<LoginWithNumberReactor>{
 
     override func viewDidLoad(){
         super.viewDidLoad()
