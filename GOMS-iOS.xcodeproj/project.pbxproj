@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00218B877F00F30482C3322C /* IntroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D731D6D31347481DA366521B /* IntroViewModel.swift */; };
+		00218B877F00F30482C3322C /* IntroReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D731D6D31347481DA366521B /* IntroReactor.swift */; };
 		00376F6D7377122406E0BAAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABB6E2ADDC0ED6343FA96DB1 /* Assets.xcassets */; };
 		00C1EDD175C07AA22845430E /* OutingListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0635F77C3B1C0CC85FAD2869 /* OutingListModel.swift */; };
 		0BF7A04CD7B51FC80A4F6472 /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 39313DE12E85BD2C48238CCC /* SF-Pro-Text-Medium.otf */; };
@@ -180,7 +180,7 @@
 		D1FE83833543F454C7F1C32C /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		D3A56D0F2A6BF9775902773D /* GOMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GOMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6B5037D396751D7329C3D61 /* GOMSImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOMSImageView.swift; sourceTree = "<group>"; };
-		D731D6D31347481DA366521B /* IntroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewModel.swift; sourceTree = "<group>"; };
+		D731D6D31347481DA366521B /* IntroReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroReactor.swift; sourceTree = "<group>"; };
 		D87FBF56FF18F068A62D2666 /* EditAuthorityRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAuthorityRequest.swift; sourceTree = "<group>"; };
 		DD13EFD2DBBE1E35454F269B /* GOMSShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOMSShadow.swift; sourceTree = "<group>"; };
 		DF5F326E926997F82820F199 /* RoleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleCell.swift; sourceTree = "<group>"; };
@@ -240,7 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				BFD87E3C008AE719C438F552 /* View */,
-				3771E199C9D78C1BBD6FB81D /* ViewModel */,
+				3771E199C9D78C1BBD6FB81D /* Reactor */,
 			);
 			path = Intro;
 			sourceTree = "<group>";
@@ -416,12 +416,12 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
-		3771E199C9D78C1BBD6FB81D /* ViewModel */ = {
+		3771E199C9D78C1BBD6FB81D /* Reactor */ = {
 			isa = PBXGroup;
 			children = (
-				D731D6D31347481DA366521B /* IntroViewModel.swift */,
+				D731D6D31347481DA366521B /* IntroReactor.swift */,
 			);
-			path = ViewModel;
+			path = Reactor;
 			sourceTree = "<group>";
 		};
 		3797F06D332BC2907C32555B /* Font */ = {
@@ -1076,7 +1076,7 @@
 				702E0F7435A192AA3D09856C /* GOMSToken.swift in Sources */,
 				8207672D806B3E9BA8F4A415 /* UINavigationBar.swift in Sources */,
 				C295C3CB1AB4289264FEB1E3 /* IntroViewController.swift in Sources */,
-				00218B877F00F30482C3322C /* IntroViewModel.swift in Sources */,
+				00218B877F00F30482C3322C /* IntroReactor.swift in Sources */,
 				526E648A9EA922B192DF0736 /* LoginWithNumberViewController.swift in Sources */,
 				17EFEB02E598A042C1191B07 /* LoginWithNumberViewModel.swift in Sources */,
 				96CC4DEF30770C1F115658DA /* BaseViewController.swift in Sources */,
