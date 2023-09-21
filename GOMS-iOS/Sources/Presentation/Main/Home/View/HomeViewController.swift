@@ -120,13 +120,13 @@ class HomeViewController: BaseViewController<HomeReactor> {
         $0.layer.cornerRadius = 10
     }
     
-    private lazy var profileImg = UIImageView().then {
+    var profileImg = UIImageView().then {
         $0.image = UIImage(named: "dummyImage.svg")
         $0.layer.cornerRadius = 20
         $0.layer.masksToBounds = true
     }
     
-    private lazy var userNameText = UILabel().then {
+    var userNameText = UILabel().then {
         $0.text = "로딩중입니다..."
         $0.textColor = UIColor.black
         $0.font = UIFont.GOMSFont(size: 16, family: .Medium)
@@ -137,7 +137,7 @@ class HomeViewController: BaseViewController<HomeReactor> {
         $0.tintColor = .mainColor
     }
     
-    private lazy var userNumText = UILabel().then {
+    var userNumText = UILabel().then {
         $0.text = "로딩중입니다..."
         $0.textColor = UIColor.subColor
         $0.font = UIFont.GOMSFont(size: 12, family: .Regular)
@@ -226,6 +226,10 @@ class HomeViewController: BaseViewController<HomeReactor> {
             .map { _ in HomeReactor.Action.fetchLateRank }
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
+        self.rx.methodInvoked(#selector(viewWillAppear))
+            .map { _ in HomeReactor.Action.fetchProfile }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
     }
     
     override func bindView(reactor: HomeReactor) {
@@ -269,10 +273,18 @@ class HomeViewController: BaseViewController<HomeReactor> {
                     spread: 0
                 )
                 let url = URL(string: item.profileUrl ?? "")
-                cell.userProfileImage.kf.setImage(with: url, placeholder: UIImage(named: "DummyImage.svg"))
+                cell.userProfileImage.kf.setImage(
+                    with: url,
+                    placeholder: UIImage(named: "dummyImage.svg")
+                )
                 cell.studentName.text = item.name
                 cell.studentNum.text = "\(item.studentNum.grade)\(item.studentNum.classNum)\(item.studentNum.number)"
             }.disposed(by: disposeBag)
+        
+        reactor.state
+            .map { $0.userData }
+            .bind(to: self.rx.fetchUserData)
+            .disposed(by: disposeBag)
         
     }
 }

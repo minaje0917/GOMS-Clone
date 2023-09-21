@@ -55,6 +55,7 @@
 		73F4534655B41782CE790A4C /* Fraunces-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33EEE569891C3731AE11B3DB /* Fraunces-Black.ttf */; };
 		7660552A9BFFE52FBCFEBBB9 /* HomeReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D6510F4883CE9AD796FD8F /* HomeReactor.swift */; };
 		777966712ABBC488003E0A07 /* UILabel+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777966702ABBC488003E0A07 /* UILabel+Rx.swift */; };
+		777966732ABBCECD003E0A07 /* HomeView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777966722ABBCECD003E0A07 /* HomeView+Rx.swift */; };
 		7AAF0E0FB49FD12113D2A6FB /* QRCode in Frameworks */ = {isa = PBXBuildFile; productRef = FDDF27BAA27DB80FFA7E1BF2 /* QRCode */; };
 		7AAFB23D3C59E17B95BD2657 /* Siren in Frameworks */ = {isa = PBXBuildFile; productRef = 28027DF5225FC73445281A5F /* Siren */; };
 		81C846E7B6C1B3377D89F2E1 /* MakeQRModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0730E97BADBC88DB876C1393 /* MakeQRModel.swift */; };
@@ -154,6 +155,7 @@
 		71F53CB28B1A5311BF484B8E /* SignInRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRequest.swift; sourceTree = "<group>"; };
 		73B05B3CB63AA72F32F58F52 /* RefreshTokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshTokenModel.swift; sourceTree = "<group>"; };
 		777966702ABBC488003E0A07 /* UILabel+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Rx.swift"; sourceTree = "<group>"; };
+		777966722ABBCECD003E0A07 /* HomeView+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeView+Rx.swift"; sourceTree = "<group>"; };
 		7E14EAC00E2627CE96CDAF3F /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
 		7EF5435A5D9016B119A4573D /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
 		8897DBB2E89D9A3111F95E28 /* BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
@@ -620,6 +622,7 @@
 			isa = PBXGroup;
 			children = (
 				777966702ABBC488003E0A07 /* UILabel+Rx.swift */,
+				777966722ABBCECD003E0A07 /* HomeView+Rx.swift */,
 			);
 			path = Rx;
 			sourceTree = "<group>";
@@ -1059,6 +1062,7 @@
 				197141CE26653C403692AEA9 /* SignInModel.swift in Sources */,
 				90C0666B24341AF743D2A48E /* LateRankModel.swift in Sources */,
 				32FAB44A8574F1B2397B936F /* OutingCountModel.swift in Sources */,
+				777966732ABBCECD003E0A07 /* HomeView+Rx.swift in Sources */,
 				00C1EDD175C07AA22845430E /* OutingListModel.swift in Sources */,
 				D1BDAC2DC3627EC26CBCEE7B /* OutingModel.swift in Sources */,
 				8C3E388AC696BE1B4400758F /* OutingSearchModel.swift in Sources */,

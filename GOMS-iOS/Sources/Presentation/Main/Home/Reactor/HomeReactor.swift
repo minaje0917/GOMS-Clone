@@ -15,6 +15,10 @@ class HomeReactor: Reactor, Stepper{
     
     let lateProvider = MoyaProvider<LateServices>(plugins: [NetworkLoggerPlugin()])
     
+    let profileProvider = MoyaProvider<AccountServices>(plugins: [NetworkLoggerPlugin()])
+    
+    var userData: AccountResponse?
+    
     var lateRank: [LateRankResponse] = []
     
     var outingCount: OutingCountResponse = .init(outingCount: 0)
@@ -33,16 +37,19 @@ class HomeReactor: Reactor, Stepper{
         case outingButtonDidTap
         case fetchOutingCount
         case fetchLateRank
+        case fetchProfile
     }
     
     enum Mutation {
         case fetchOutingCount(count: Int)
         case fetchLateRank(lateRank: [LateRankResponse])
+        case fetchProfile(userData: AccountResponse)
     }
     
     struct State {
         var count: Int = 0
         var lateRank: [LateRankResponse] = []
+        var userData: AccountResponse?
     }
     
     // MARK: - Init
@@ -65,6 +72,8 @@ extension HomeReactor {
             return fetchOutingCount()
         case .fetchLateRank:
             return fetchLateRank()
+        case .fetchProfile:
+            return fetchProfile()
         }
     }
 }
@@ -73,6 +82,8 @@ extension HomeReactor {
     func reduce(state: State, mutation: Mutation) -> State {
         var newState = state
         switch mutation {
+        case let .fetchProfile(userData):
+            newState.userData = userData
         case let .fetchOutingCount(count):
             newState.count = count
         case let .fetchLateRank(lateRank):
@@ -146,6 +157,38 @@ private extension HomeReactor {
                     switch statusCode{
                     case 200..<300:
                         observer.onNext(Mutation.fetchLateRank(lateRank: self.lateRank))
+                    case 401:
+                        self.gomsAdminRefreshToken.tokenReissuance()
+                        self.steps.accept(GOMSStep.failureAlert(
+                            title: "오류",
+                            message: "작업을 한 번 더 시도해주세요"
+                        ))
+                    default:
+                        print("ERROR")
+                    }
+                case let .failure(err):
+                    observer.onError(err)
+                }
+            }
+            return Disposables.create()
+        }
+    }
+    
+    func fetchProfile() -> Observable<Mutation> {
+        return Observable.create { observer in
+            self.profileProvider.request(.account(authorization: self.accessToken)) { result in
+                switch result {
+                case let .success(res):
+                    do {
+                        self.userData = try res.map(AccountResponse.self)
+                    }catch(let err) {
+                        print(String(describing: err))
+                    }
+                    let statusCode = res.statusCode
+                    switch statusCode{
+                    case 200..<300:
+                        guard let userData = self.userData else {return}
+                        observer.onNext(Mutation.fetchProfile(userData: userData))
                     case 401:
                         self.gomsAdminRefreshToken.tokenReissuance()
                         self.steps.accept(GOMSStep.failureAlert(
