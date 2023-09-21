@@ -141,7 +141,7 @@
 		4490FA17B9A929FDAEEA923C /* GOMSTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOMSTabBar.swift; sourceTree = "<group>"; };
 		46453BBA10D94D166B2498C9 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
 		53C2E733D878EFF0980E2499 /* LoginWithNumberTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithNumberTextField.swift; sourceTree = "<group>"; };
-		54E3A574A755C72873CD6306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		54E3A574A755C72873CD6306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55D9D0634B7E8F5C42182ECA /* StudentCouncilServices.swift .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StudentCouncilServices.swift .swift"; sourceTree = "<group>"; };
 		5C5CF79422AB13E1EE716100 /* AuthServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServices.swift; sourceTree = "<group>"; };
 		5CFE1BED4EFEAAF1A4F6C847 /* AppFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
@@ -322,10 +322,9 @@
 		1D7C950AD9A5F2466F7A8BE8 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				5C922DAA2E0069271EFCB6B0 /* Auth */,
 				CC411DA68DB947F2DE4D0E79 /* Base */,
-				1C55A26C560F6E91B821D271 /* Main */,
-				74C92CAD275D1A87EFE19488 /* TabBar */,
+				777966742ABBD35E003E0A07 /* Scene */,
+				777966752ABBD385003E0A07 /* Utils */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -451,8 +450,6 @@
 			children = (
 				A60E4713C2F8D878C44FADCA /* Application */,
 				56323FF0400E945A8B59E94A /* Data */,
-				434A58350A1F1A0AF31775EC /* DesignSystem */,
-				C71A15F2609BDCF9A8937875 /* Extension */,
 				1D7C950AD9A5F2466F7A8BE8 /* Presentation */,
 			);
 			path = Sources;
@@ -625,6 +622,25 @@
 				777966722ABBCECD003E0A07 /* HomeView+Rx.swift */,
 			);
 			path = Rx;
+			sourceTree = "<group>";
+		};
+		777966742ABBD35E003E0A07 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				5C922DAA2E0069271EFCB6B0 /* Auth */,
+				1C55A26C560F6E91B821D271 /* Main */,
+				74C92CAD275D1A87EFE19488 /* TabBar */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		777966752ABBD385003E0A07 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				434A58350A1F1A0AF31775EC /* DesignSystem */,
+				C71A15F2609BDCF9A8937875 /* Extension */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		78F09023BC88D75D81A0F52B /* Home */ = {
