@@ -27,7 +27,7 @@
 		2790EF0FB564F8CB2C7A9307 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B63889E2CE3DE6CECF9E50B /* SceneDelegate.swift */; };
 		281F5521BCF7E784E22419E8 /* AuthFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87F44DB0DCBE1F74B576907 /* AuthFlow.swift */; };
 		289D47649380CA7B80FD00E7 /* QRScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 4FE8C28B467C9CE652486900 /* QRScanner */; };
-		2E688212D716DFFBF49CAE79 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D8DD3B2162507EFE23B404 /* ProfileViewModel.swift */; };
+		2E688212D716DFFBF49CAE79 /* ProfileReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D8DD3B2162507EFE23B404 /* ProfileReactor.swift */; };
 		31D5181F3E02660DC61E7534 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46453BBA10D94D166B2498C9 /* AccountModel.swift */; };
 		32FAB44A8574F1B2397B936F /* OutingCountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1222865F763F7F78EB7F82B /* OutingCountModel.swift */; };
 		3677857998C796CF1F619EE2 /* RxFlow in Frameworks */ = {isa = PBXBuildFile; productRef = B5A5D4FDFFB3F435EF7F6B53 /* RxFlow */; };
@@ -56,6 +56,7 @@
 		7660552A9BFFE52FBCFEBBB9 /* HomeReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D6510F4883CE9AD796FD8F /* HomeReactor.swift */; };
 		777966712ABBC488003E0A07 /* UILabel+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777966702ABBC488003E0A07 /* UILabel+Rx.swift */; };
 		777966732ABBCECD003E0A07 /* HomeView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777966722ABBCECD003E0A07 /* HomeView+Rx.swift */; };
+		777966772ABBE818003E0A07 /* ProfileView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777966762ABBE818003E0A07 /* ProfileView+Rx.swift */; };
 		7AAF0E0FB49FD12113D2A6FB /* QRCode in Frameworks */ = {isa = PBXBuildFile; productRef = FDDF27BAA27DB80FFA7E1BF2 /* QRCode */; };
 		7AAFB23D3C59E17B95BD2657 /* Siren in Frameworks */ = {isa = PBXBuildFile; productRef = 28027DF5225FC73445281A5F /* Siren */; };
 		81C846E7B6C1B3377D89F2E1 /* MakeQRModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0730E97BADBC88DB876C1393 /* MakeQRModel.swift */; };
@@ -156,6 +157,7 @@
 		73B05B3CB63AA72F32F58F52 /* RefreshTokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshTokenModel.swift; sourceTree = "<group>"; };
 		777966702ABBC488003E0A07 /* UILabel+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Rx.swift"; sourceTree = "<group>"; };
 		777966722ABBCECD003E0A07 /* HomeView+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeView+Rx.swift"; sourceTree = "<group>"; };
+		777966762ABBE818003E0A07 /* ProfileView+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileView+Rx.swift"; sourceTree = "<group>"; };
 		7E14EAC00E2627CE96CDAF3F /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
 		7EF5435A5D9016B119A4573D /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
 		8897DBB2E89D9A3111F95E28 /* BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
@@ -188,7 +190,7 @@
 		DF5F326E926997F82820F199 /* RoleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleCell.swift; sourceTree = "<group>"; };
 		DF651ECE46F86CCB3159AC19 /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
 		DF8A3BF1C61EFCBB1A314149 /* QRCodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeModel.swift; sourceTree = "<group>"; };
-		E3D8DD3B2162507EFE23B404 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		E3D8DD3B2162507EFE23B404 /* ProfileReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileReactor.swift; sourceTree = "<group>"; };
 		E87F44DB0DCBE1F74B576907 /* AuthFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFlow.swift; sourceTree = "<group>"; };
 		E8926A38BD09D59151CDC98D /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F0CB27F8DFB3B74247721004 /* GOMSToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOMSToken.swift; sourceTree = "<group>"; };
@@ -233,7 +235,7 @@
 			children = (
 				29494436C442EDAC7E609D9B /* Cell */,
 				01B5A62669A529644A9BE66F /* View */,
-				44EA8FFC819024E5AD4FC1AD /* ViewModel */,
+				44EA8FFC819024E5AD4FC1AD /* Reactor */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -471,12 +473,12 @@
 			path = DesignSystem;
 			sourceTree = "<group>";
 		};
-		44EA8FFC819024E5AD4FC1AD /* ViewModel */ = {
+		44EA8FFC819024E5AD4FC1AD /* Reactor */ = {
 			isa = PBXGroup;
 			children = (
-				E3D8DD3B2162507EFE23B404 /* ProfileViewModel.swift */,
+				E3D8DD3B2162507EFE23B404 /* ProfileReactor.swift */,
 			);
-			path = ViewModel;
+			path = Reactor;
 			sourceTree = "<group>";
 		};
 		488DDF038D40B08C3807889A /* ViewModel */ = {
@@ -620,6 +622,7 @@
 			children = (
 				777966702ABBC488003E0A07 /* UILabel+Rx.swift */,
 				777966722ABBCECD003E0A07 /* HomeView+Rx.swift */,
+				777966762ABBE818003E0A07 /* ProfileView+Rx.swift */,
 			);
 			path = Rx;
 			sourceTree = "<group>";
@@ -1078,6 +1081,7 @@
 				197141CE26653C403692AEA9 /* SignInModel.swift in Sources */,
 				90C0666B24341AF743D2A48E /* LateRankModel.swift in Sources */,
 				32FAB44A8574F1B2397B936F /* OutingCountModel.swift in Sources */,
+				777966772ABBE818003E0A07 /* ProfileView+Rx.swift in Sources */,
 				777966732ABBCECD003E0A07 /* HomeView+Rx.swift in Sources */,
 				00C1EDD175C07AA22845430E /* OutingListModel.swift in Sources */,
 				D1BDAC2DC3627EC26CBCEE7B /* OutingModel.swift in Sources */,
@@ -1120,7 +1124,7 @@
 				60EAF1A265451E7899876667 /* ProfileTableViewCell.swift in Sources */,
 				777966712ABBC488003E0A07 /* UILabel+Rx.swift in Sources */,
 				6A6F960A5D95151F3FBC0F8E /* ProfileViewController.swift in Sources */,
-				2E688212D716DFFBF49CAE79 /* ProfileViewModel.swift in Sources */,
+				2E688212D716DFFBF49CAE79 /* ProfileReactor.swift in Sources */,
 				3E6CD32E11DA46CEAFBC933B /* QRCodeViewController.swift in Sources */,
 				1815C764B5C149B5B9CC62DD /* QRCodeModel.swift in Sources */,
 				493128A428A77484FDE0078A /* RoleCell.swift in Sources */,
